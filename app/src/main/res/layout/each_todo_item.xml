@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:padding="5dp"
+    android:layout_marginBottom="15dp"
+    android:backgroundTint="@color/white"
+    android:background="@drawable/rounded_corner"
+    tools:context=".Fragments.NewFragment">
+
+    <!-- Text Field -->
+
+    <!-- Buttons -->
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/todoTask"
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:padding="18dp"
+        android:paddingTop="10dp"
+
+        android:paddingBottom="10dp"
+        android:text="Enter your text here"
+        app:layout_constraintEnd_toStartOf="@+id/editTask"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/editTask"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/edit1"
+        android:padding="7dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deleteTask"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/deleteTask"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginEnd="6dp"
+        android:padding="7dp"
+        android:background="@drawable/close2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

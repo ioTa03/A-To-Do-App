@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/upFragment"
+        android:name="com.example.todo1.Fragments.UpFragment"
+        android:label="fragment_up"
+        tools:layout="@layout/fragment_up" >
+        <action
+            android:id="@+id/action_upFragment_to_inFragment"
+            app:destination="@id/inFragment"
+            app:popUpTo="@id/upFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_upFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/upFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.todo1.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_inFragment"
+            app:destination="@id/inFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_homeFragment_to_inFragment2"
+            app:destination="@id/inFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_homeFragment_to_upFragment"
+            app:destination="@id/upFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/inFragment"
+        android:name="com.example.todo1.Fragments.InFragment"
+        android:label="fragment_in"
+        tools:layout="@layout/fragment_in" >
+        <action
+            android:id="@+id/action_inFragment_to_upFragment"
+            app:destination="@id/upFragment"
+            app:popUpTo="@id/inFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_inFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/inFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.todo1.Fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashFragment_to_inFragment"
+            app:destination="@id/inFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>
